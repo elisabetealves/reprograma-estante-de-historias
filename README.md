@@ -83,7 +83,7 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 ## 📁 Arquitetura MVC 
 
 ```
- 📁 projeto_final
+ 📁 reprograma-estante-de-historias
    |
    |-  📁 src
    |    |
