@@ -1,0 +1,758 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Estante de Histórias",
+        "description": "Essa é uma API para escritores independentes se cadastrarem e disponibilizarem suas obras para os usuários com o objetivo de ganhar mais visibilidade.",
+        "termsOfService": "http://localhost:7070/terms/",
+        "contact": {
+            "email": "lizzbeth.lizz.diaz@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:7070/",
+            "description": "API Estante de Histórias"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Autores",
+            "description": "Manipulação das Rotas de Autores"
+        },
+        {
+            "name": "Comentários",
+            "description": "Manipulação das Rotas de Comentários"
+        },
+        {
+            "name": "Livros",
+            "description": "Manipulação das Rotas de Livros"
+        }
+    ],
+    "paths": {
+        "/autores/cadastar": {
+            "post": {
+                "tags": [
+                    "Autores"
+                ],
+                "summary": "Criar/cadastrar autores",
+                "description": "Cadastro dos autores",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Autores"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "404": {
+                        "description": "ERROR",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "objetc",
+                                    "$ref": "#/components/schemas/Autores"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/autores": {
+            "get": {
+                "tags": [
+                    "Autores"
+                ],
+                "summary": "Retroena todos os autores",
+                "description": "Retorna todos os autores cadastrados",
+                "parameters": [
+                    {
+                        "name": "Autor",
+                        "description": "Retorna todos os autores cadastrados",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/Autores"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Autores"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/autores/nome": {
+            "get": {
+                "tags": [
+                    "Autores"
+                ],
+                "summary": "Buscar autor por nome",
+                "description": "Retorna autores por nome",
+                "parameters": [
+                    {
+                        "name": "nome",
+                        "in": "query",
+                        "description": "Nome do autor para busca",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/jsn": {
+                                "schema": {
+                                    "type": "objetc",
+                                    "$ref": "#/components/schemas/Autores"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/autores/{Id}": {
+            "get": {
+                "tags": [
+                    "Autores"
+                ],
+                "summary": "Busca por ID",
+                "description": "Retorna um autor específico por ID",
+                "parameters": [
+                    {
+                        "name": "Autor Id",
+                        "in": "path",
+                        "description": "Id do autor para retorno",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Autores"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Autores"
+                ],
+                "summary": "Atualizaçao dos dados de um autor cadastrado",
+                "requestBody": {
+                    "description": "Atualiza a entidade autor",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Autores"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "404": {
+                        "description": "Error",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "OK. Atualizado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Autores"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Autores"
+                ],
+                "summary": "Deletar um autor",
+                "description": "Deleta um autor específico por ID",
+                "parameters": [
+                    {
+                        "name": "Autor Id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do autor para deletar"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Autor deletado",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "Autor não encontado(id inválido)",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/comentario/criar": {
+            "post": {
+                "tags": [
+                    "Comentários"
+                ],
+                "summary": "Cria um comentário ",
+                "description": "Cria os comentários relacinados aos livros",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Comentarios"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "404": {
+                        "description": "ERROR",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "Comentário criado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "objetc",
+                                    "$ref": "#/components/schemas/Comentarios"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/comentario": {
+            "get": {
+                "tags": [
+                    "Comentários"
+                ],
+                "summary": "Retorna todos os comentários",
+                "description": "Mostra os comentários",
+                "parameters": [
+                    {
+                        "name": "Comentário",
+                        "description": "Retorna todos os comentários cadastrados",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "$ref": "#/components/schemas/Comentarios"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Comentarios"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/comentario/{Id}": {
+            "get": {
+                "tags": [
+                    "Comentários"
+                ],
+                "summary": "Busca comentário por ID",
+                "description": "Retorna um comentario específico por ID",
+                "parameters": [
+                    {
+                        "name": "Comentário Id",
+                        "in": "path",
+                        "description": "Id do comentario para retorno",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "objetc",
+                                    "$ref": "#/components/schemas/Comentarios"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Comentários"
+                ],
+                "summary": "Atualizaçao de um comentário",
+                "requestBody": {
+                    "description": "Atualiza a entidade comentário",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Comentarios"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "404": {
+                        "description": "Error",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "OK. Atualizado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Comentarios"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Comentários"
+                ],
+                "summary": "Deleta comentário por  ID",
+                "description": "Deleta um comentário ",
+                "parameters": [
+                    {
+                        "name": "Autor Id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do comentário para deletar"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Comentário deletado",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ERROR (Id não encontado)",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/livros/cadastar": {
+            "post": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Cadastra um livro ",
+                "description": "Cadastra os livros ",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Livros"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "404": {
+                        "description": "ERROR",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "Livro cadastrado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "objetc",
+                                    "$ref": "#/components/schemas/Livros"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/livros/{id}/like": {
+            "post": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Dar like em um livro específico",
+                "description": "Dar um like",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "like":{
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK. ",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ERROR",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/livros/{id}/dislike": {
+            "post": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Retira like de um livro específico",
+                "description": "Retira um like",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "dislike":{
+                                        "type": "number",
+                                        "description": "O número tem que ser negativo"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK. ",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ERROR",
+                        "content": {}
+                    }
+                }
+            }
+        },
+        "/livros": {
+            "get": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Retorna todos os livros",
+                "description": "Retorna todos os livros cadastrados",
+                "parameters": [
+                    {
+                        "name": "Livros",
+                        "description": "Retorna todos os livros cadastrados",
+                        "requestBody": {
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Livros"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Livros"
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                
+            }
+        },
+        "/livros/genero": {
+            "get": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Buscar livro por gênero",
+                "description": "Retorna autores por genero",
+                "parameters": [
+                    {
+                        "name": "genero",
+                        "in": "query",
+                        "description": "Gênero do livro para busca",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/jsn": {
+                                "schema": {
+                                    "type": "objetc",
+                                    "$ref": "#/components/schemas/Livros"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/livros/{id}": {
+            "get": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Busca por ID",
+                "description": "Retorna um livro específico por ID",
+                "parameters": [
+                    {
+                        "name": "Livro Id",
+                        "in": "path",
+                        "description": "Id do livro para retorno",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Operação realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Livros"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Atualizaçao dos dados de um livro cadastrado",
+                "requestBody": {
+                    "description": "Atualiza a entidade livro",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Livros"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "404": {
+                        "description": "Error",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "OK. Livros atualizado com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Livros"
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            },
+            "patch": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Atualiza qualquer parte (separadamente) de um livro cadastrado",
+                "requestBody": {
+                    "description": "Atualiza parte livro",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "atributo que será atualizado": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "404": {
+                        "description": "Error",
+                        "content": {}
+                    },
+                    "200": {
+                        "description": "OK. Atualizado realizada com sucesso",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Livros"
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            },
+            "delete": {
+                "tags": [
+                    "Livros"
+                ],
+                "summary": "Deleta livro por  ID",
+                "description": "Deleta um livro ",
+                "parameters": [
+                    {
+                        "name": "Livro Id",
+                        "in": "path",
+                        "required": true,
+                        "description": "Id do livro para deletar"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Livro deletado",
+                        "content": {}
+                    },
+                    "404": {
+                        "description": "ERROR (Id não encontado)",
+                        "content": {}
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Autores": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "nome": {
+                        "type": "string"
+                    },
+                    "biografia": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "criadoEm": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Comentarios": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "comentario": {
+                        "type": "string"
+                    },
+                    "criadoEm": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Livros": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "like": {
+                        "type": "number"
+                    },
+                    "titulo": {
+                        "type": "string"
+                    },
+                    "autor": {
+                        "type": "string"
+                    },
+                    "genero": {
+                        "type": "string"
+                    },
+                    "paginas": {
+                        "type": "number"
+                    },
+                    "idioma": {
+                        "type": "string"
+                    },
+                    "exibicao": {
+                        "type": "string"
+                    },
+                    "criadoEm": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
