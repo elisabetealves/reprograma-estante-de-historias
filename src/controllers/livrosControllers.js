@@ -1,22 +1,29 @@
+const mongoose = require('mongoose')
 const Livros = require('../models/livro')
 
+const cadastrarLivro = async(req, res) => {
+    const livro = new Livros({
+        _id: new mongoose.Types.ObjectId(),
+        titulo: req.body.titulo,
+        sinopse: req.body.sinopse,
+        autor: req.body.autor,
+        genero:req.body.genero,
+        paginas:req.body.paginas,
+        idioma:req.body.idioma,
+        exibicao:req.body.exibicao
+    })
 
-const cadastrarLivro = async (req, res) => {
+    //nao permite criar um livro que ja existe
+    const livroExiste = await Livros.findOne({titulo: req.body.titulo})
+    if(livroExiste) {
+        return res.status(409).json({error: "Livro já cadastrado!"})
+    }
+    
     try {
-        const livro = await Livros.create(req.body)
-
-        //Não permite criar um livro que ja existe
-        const livroJaExiste = await Livros.findOne({ titulo: req.body.titulo })
-        if (livroJaExiste) {
-            return res.status(409).json({ error: "livro já cadastrado!" })
-        }
-
-        return res.status(201).json({
-            message: "Livro cadastrado com sucesso!",
-            livro
-        })
-    } catch (error) {
-        return res.status(400).send({ message: error.message })
+        const novoLivro = await livro.save()
+        return res.status(201).json(novoLivro)
+    }catch (err) {
+        return res.status(400).json({message: error.message})
     }
 }
 
