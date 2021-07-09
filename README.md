@@ -292,7 +292,6 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 *  Sistema de login
 *  Uma rota para que os autores possam enviar seus manuscritos para as editoras cadastradas
 *  Ranking 
-*  Avaliação
 *  Implantação de código HTML e CSS para criação de uma interface capaz de possibilitar a interação do usuário com aplicação 
 
 
