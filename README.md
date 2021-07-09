@@ -133,6 +133,8 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 <br>
 
 ## 🔃 Retorna a documentação no swagger 
+    
+Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 | Método HTTP  | Endpoint                            | Descrição                            |
 | ------------ | ----------------------------------- | ------------------------------------ |
