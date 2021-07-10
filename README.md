@@ -223,11 +223,12 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
  ## ✅ Dados para Collection Livros
 
 - id: autogerado e obrigatório
+- like: opcional
 - titulo: texto e obrigatório
 - sinopse: texto e obrigatório
-- autor: referencia do autor cadastrado previamente obrigatório
+- autor: referência do autor cadastrado previamente obrigatório
 - genero: texto e obrigatório
-- pagina: número e obrigatório
+- paginas: número e obrigatório
 - idioma: texto e obrigatório
 - exibição: texto e obrigatório
 - criadoEm: data gerada automaticamente e obrigatório
@@ -262,7 +263,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-## ✅ Dados para Collection comentario
+## ✅ Dados para Collection comentário
 
 - id: autogerado e obrigatório
 - comentario: texto e obrigatório
