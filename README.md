@@ -11,7 +11,7 @@
 
 <br>
 
-<p align="justify">Eu sou apaixonada por leitura e assim como eu existem milhares de pessoas pelo mundo, mas tem pessoas que além de amor pela leitura também amam escrever suas histórias, mas não é segredo para ninguém que, infelizmente, o Brasil não é um país que valoriza as artes em geral, incluindo a literatura. Ser escritor iniciante e independente no Brasil não é fácil, dentre as centenas de obras recebidas pelo departamento editorial, são priorizados aqueles de escritores conhecidos ou blogueiros populares. Geralmente, só 12% das 800 mil propostas são entregues às editoras, ou seja 15 mil se tornam livros.
+<p align="justify">Eu sou apaixonada por leitura e assim como eu existem milhares de pessoas pelo mundo, mas tem pessoas que além de amor pela leitura também amam escrever suas histórias, mas não é segredo para ninguém que, infelizmente, o Brasil não é um país que valoriza as artes em geral, incluindo a literatura. Ser escritor iniciante e independente no Brasil não é fácil, dentre as centenas de obras recebidas pelo departamento editorial, são priorizados aqueles de escritores conhecidos ou blogueiros populares. Geralmente, só 12% das 800 mil propostas são entregues às editoras, ou seja, apenas 15 mil se tornam livros.
 
 <p align="justify">A falta de interesse de muitas editoras por escritores iniciantes e independentes fazem com que esses escritores enfrentem um leão por dia para que suas obras possam ter visibilidade, além disso existe o custo que o autor deve arcar com a impressão do livro e o custo do envio e muitos não tem condições para tal.
 
