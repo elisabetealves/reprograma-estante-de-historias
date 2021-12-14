@@ -325,7 +325,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
     
 ## 👋 Saudações, Eli!
     
-_Caso queira contribuir com meu projeto, será totalmente bem-vindx!!!_
+_Caso queira contribuir com meu projeto, será totalmente bem-vindX!!!_
 _Qualquer dúvida ou sugestão, chama no contatinho!_
 
  <img src="https://i.picasion.com/pic91/8dd880c47cfc761e805745c941097adb.gif" alt="Gif Yeah" width="200">
