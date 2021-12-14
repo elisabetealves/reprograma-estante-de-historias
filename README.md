@@ -191,7 +191,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-## ✅ Dados para Collection Autores
+## 📊 Dados para Collection Autores
 
 - id: autogerado e obrigatório
 - nome: texto e obrigatório
@@ -201,7 +201,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-## ✅ API deve retornar seguinte JSON:
+## ✔️ API deve retornar seguinte JSON:
 
 ```jsx
 
@@ -220,7 +220,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 ```
  <br>
 
- ## ✅ Dados para Collection Livros
+ ## 📊 Dados para Collection Livros
 
 - id: autogerado e obrigatório
 - like: opcional
@@ -235,7 +235,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-## ✅ API deve retornar seguinte JSON:
+## ✔️ API deve retornar seguinte JSON:
 
 ```jsx
 {
@@ -263,7 +263,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-## ✅ Dados para Collection comentário
+## 📊 Dados para Collection comentário
 
 - id: autogerado e obrigatório
 - comentario: texto e obrigatório
@@ -271,7 +271,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-## ✅ API deve retornar seguinte JSON:
+## ✔️ API deve retornar seguinte JSON:
    
 ```jsx
 
