@@ -48,7 +48,18 @@ API desenvolvida como Projeto Final para a conclusão do curso de Backend [{Repr
 
 ## 📚 Aprendizados
 
-O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRIAR), READ(LER-CONSULTA), UPDATE(ATUALIZAR) e DELETE(DESTRUIÇÃO). 
+> ⚠️ O projeto final consiste em uma API fundamentada no CRUD. O CRUD é um acrônimo para Create(CRIAR), Read(LER-CONSULTAR), Update(ATUALIZAR) e Delete(DELETAR). 
+    São as 4 operações principais em um banco de dados. No MongoDB, usando o Mongoose aqui estão algumas formas de fazer:
+<br>
+
+| OPERAÇÃO | MONGODB | MONGOOSE |
+| --- | --- | --- |
+| C`REATE` | insertOne() | save() |
+| R`EAD` | find() | find() |
+| U`PDATE` | updateOne() | save() |
+| D`ELETE` | deleteOne() | remove() |
+
+<br>
 
 <br>
 
@@ -120,6 +131,21 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
    |- 📑 server.js
 
 ```
+<br>
+    
+## ⚙️ Como rodar o projeto localmente
+Siga os passos e inclua as informações abaixo:
+
+| Passo     | Comando/informação       |
+| --------- | ----------- |
+| Faça o fork  | `botão de forkar` |
+| Faça o clone  | `git clone` |
+| Instale as dependências   | `npm i` |
+| Crie seu .env e inclua as variáveis e os valores     | `MONGODB_URL` |
+| utilize o script de dev    | `npm dev` |
+
+ MONGODB_URL = URL do `MongoDb Atlas` Banco de dados orientado a documentos e interface na nuvem.
+    
 <br>
 
 ## 🔃 Rotas
@@ -289,18 +315,37 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
 
-*  Autenticação das Rotas
-*  Sistema de login
-*  Uma rota para que os autores possam enviar seus manuscritos para as editoras cadastradas
-*  Ranking 
-*  Implantação de código HTML e CSS para criação de uma interface capaz de possibilitar a interação do usuário com aplicação 
-
-
-Caso queira contribuir com meu projeto, será totalmente bem-vindo!!!
+*  Autenticação das Rotas;
+*  Sistema de login;
+*  Uma rota para que os autores possam enviar seus manuscritos para as editoras cadastradas;
+*  Ranking;
+*  Implantação de código HTML e CSS para criação de uma interface capaz de possibilitar a interação do usuário com aplicação.
 
 <br>
+    
+## 👋 Saudações, Eli!
+    
+_Caso queira contribuir com meu projeto, será totalmente bem-vindx!!!_
+_Qualquer dúvida ou sugestão, chama no contatinho!_
 
-## 👨‍💻 Autora
+ <img src="https://i.picasion.com/pic91/8dd880c47cfc761e805745c941097adb.gif" alt="Gif Yeah" width="200">
+
+Vamos nos conectar!
+
+- [linkedin](https://www.linkedin.com/in/elisabete-a-santos/)
+- [github](https://github.com/elisabetealves)
+
+<br>
+Feito com 💜 por Elisabete Alves
+ 
+
+## 📝 Licença
+
+Este projeto esta sob a licença [MIT](./LICENSE).
+    
+    
+    
+<!-- ## 👨‍💻 Autora
 
 <br>
 
@@ -309,11 +354,4 @@ Caso queira contribuir com meu projeto, será totalmente bem-vindo!!!
 
 
 ## [Elisabete Alves](https://github.com/elisabetealves)
-## [LinkedIn](https://www.linkedin.com/mwlite/in/elisabete-alves-675637135) 
-
-<br>
- 
-
-## 📝 Licença
-
-Este projeto esta sob a licença [MIT](./LICENSE).
+## [LinkedIn](https://www.linkedin.com/mwlite/in/elisabete-alves-675637135)  -->
