@@ -330,15 +330,15 @@ _Qualquer dúvida ou sugestão, chama no contatinho!_
 
  <img src="https://i.picasion.com/pic91/8dd880c47cfc761e805745c941097adb.gif" alt="Gif Yeah" width="200">
 
-Vamos nos conectar!
+### Vamos nos conectar!
 
-- [linkedin](https://www.linkedin.com/in/elisabete-a-santos/)
-- [github](https://github.com/elisabetealves)
+- [LinkedIn](https://www.linkedin.com/in/elisabete-a-santos/)
+- [GitHub](https://github.com/elisabetealves)
 
-<br>
-Feito com 💜 por Elisabete Alves
+### Feito com 💜 por Elisabete Alves
  
-
+<br> 
+    
 ## 📝 Licença
 
 Este projeto esta sob a licença [MIT](./LICENSE).
