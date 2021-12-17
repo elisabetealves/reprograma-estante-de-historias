@@ -323,7 +323,7 @@ Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
 <br>
     
-## 👋 Saudações, Eli!
+## 👋 Saudações da Eli!
     
 _Caso queira contribuir com meu projeto, será totalmente bem-vindx!!!_
 _Qualquer dúvida ou sugestão, chama no contatinho!_
