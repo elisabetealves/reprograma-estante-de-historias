@@ -1,11 +1,33 @@
 <h1 align="center">
     <br>
-    <p align="center">Projeto Final {Reprograma}<p>
+    <p align="center"> 🚀 Projeto Final {Reprograma}<p>
 </h1>
 <p align="center">
 <img src="./imagens/img.png" width="80%" height="50%"/>
 </p>
 <br>
+
+
+## 🧠 Contexto
+
+O objetivo foi criar uma API REST para autores desconhecidos cadastrarem/divigarem suas obras.
+
+- 💻 Sobre o projeto
+- 🎯 Descrição da API
+- 🔗 Link da apresentação
+- ✨ Funcionalidades
+- 📚 Aprendizado
+- 🛠️ Tecnologias Utilizadas
+- 📦 Pacotes Utilizados
+- 📁 Arquitetura MVC 
+- ⚙️ Como rodar o projeto localmente
+- 🔃 Rotas
+- ☁ Retorna a documentação no swagger 
+- 📊 Dados para Collections 
+- 🚧 Projeto em Construção (futura melhoria)
+- 👋 Saudações da Eli!
+- 📝 Licença
+
 
 ## 💻 Sobre o projeto 
 
@@ -19,7 +41,7 @@
 
 <br><br>
 
-## 🚀 Descrição da API Estante de Histórias
+## 🎯 Descrição da API Estante de Histórias
 
 <br>
 
@@ -31,13 +53,13 @@ API desenvolvida como Projeto Final para a conclusão do curso de Backend [{Repr
   
 <br>
 
-## 🔗 Link 
+## 🔗 Link da apresentação
 
 - [Apresentação](https://www.canva.com/design/DAEjjh5kMho/o-lpglTMDauF-CRLx2e6Dw/view?utm_content=DAEjjh5kMho&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
 
 <br>
 
-## ⚙️ Funcionalidades/Objetivos
+## ✨ Funcionalidades
 
 - Cadastro dos autores e seus livros para maior visibilidade;
 - Disponibilidade dos livros gratuitamente para acesso dos usuários;
@@ -46,7 +68,7 @@ API desenvolvida como Projeto Final para a conclusão do curso de Backend [{Repr
 
 <br>
 
-## 📚 Aprendizados
+## 📚 Aprendizado
 
 > ⚠️ O projeto final consiste em uma API fundamentada no CRUD. O CRUD é um acrônimo para Create(CRIAR), Read(LER-CONSULTAR), Update(ATUALIZAR) e Delete(DELETAR). 
     São as 4 operações principais em um banco de dados. No MongoDB, usando o Mongoose aqui estão algumas formas de fazer:
@@ -79,7 +101,7 @@ Para a construção do projeto, as seguintes tecnologias foram utilizadas:
 - [Vscode](https://code.visualstudio.com/)
 - [heroku](https://dashboard.heroku.com/apps)  
 
-### Pacotes Utilizados 
+## 📦 Pacotes Utilizados 
 
 - [Express](https://expressjs.com/pt-br/)
 - [Nodemon](https://nodemon.io/)
@@ -158,7 +180,7 @@ Siga os passos e inclua as informações abaixo:
 
 <br>
 
-## 🔃 Retorna a documentação no swagger 
+## ☁ Retorna a documentação no swagger 
     
 Swagger - Heroku: https://estante-de-historias.herokuapp.com/api-docs/
 
@@ -332,8 +354,8 @@ _Qualquer dúvida ou sugestão, chama no contatinho!_
 
 ### Vamos nos conectar!
 
-- [LinkedIn](https://www.linkedin.com/in/elisabete-a-santos/)
-- [GitHub](https://github.com/elisabetealves)
+<a href="https://www.linkedin.com/in/elisabete-a-santos/"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://github.com/elisabetealves"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 ### Feito com 💜 por Elisabete Alves
  
