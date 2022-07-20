@@ -10,7 +10,7 @@
 
 ## 🧠 Contexto
 
-O objetivo foi criar uma API REST para autores desconhecidos cadastrarem/divigarem suas obras.
+O objetivo foi criar uma API REST para autores desconhecidos cadastrarem suas obras.
 
 - 💻 Sobre o projeto
 - 🎯 Descrição da API
