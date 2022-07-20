@@ -28,7 +28,7 @@ O objetivo foi criar uma API REST para autores desconhecidos cadastrarem/divigar
 - 👋 Saudações da Eli!
 - 📝 Licença
 
-  <br>
+<br>
 
 ## 💻 Sobre o projeto 
 
