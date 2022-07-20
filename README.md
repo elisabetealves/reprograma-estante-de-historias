@@ -28,6 +28,7 @@ O objetivo foi criar uma API REST para autores desconhecidos cadastrarem/divigar
 - 👋 Saudações da Eli!
 - 📝 Licença
 
+  <br>
 
 ## 💻 Sobre o projeto 
 
@@ -39,7 +40,7 @@ O objetivo foi criar uma API REST para autores desconhecidos cadastrarem/divigar
 
 <p align="justify">Sabendo disso, estou propondo uma alternativa para esse cenário e ela se chama __Estante de Histórias__ uma API para autores independentes cadastrarem e mostrarem suas obras gratuitamente e disponibilizá-las para que os usuários possam ter acesso a elas. Estante de Histórias é um projeto voltado para pessoas que amam literatura, tanto os que amam ler quanto aqueles escritores independentes que amam fazer e acontecer. Será uma API utilizada para sanar o problema de visibilidade das obras desses autores independente que não possuem tanto investimento para divulgação, e também é uma API que facilita ao usuário que gosta de consumir esse tipo de entretenimento.
 
-<br><br>
+<br>
 
 ## 🎯 Descrição da API Estante de Histórias
 
