@@ -24,7 +24,7 @@ O objetivo foi criar uma API REST para autores desconhecidos cadastrarem suas ob
 - 🔃 Rotas
 - ☁ Retorna a documentação no swagger 
 - 📊 Dados para Collections 
-- 🚧 Projeto em Construção (futura melhoria)
+- 🚧 Projeto em Construção (futuras melhorias)
 - 👋 Saudações da Eli!
 - 📝 Licença
 
